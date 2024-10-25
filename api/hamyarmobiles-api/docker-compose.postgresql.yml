@@ -5,8 +5,8 @@ services:
     image: docker.arvancloud.ir/postgres:latest
     container_name: postgres_db
     environment:
-      POSTGRES_PASSWORD: ${DATABASE_USERNAME} # Loaded from .env file
-      POSTGRES_DB: ${DATABASE_PASSWORD}            # Loaded from .env file
+      POSTGRES_PASSWORD: ${DATABASE_PASSWORD} # Loaded from .env file
+      POSTGRES_DB: ${DATABASE_NAME}            # Loaded from .env file
     ports:
       - "5432:5432"
     volumes:
