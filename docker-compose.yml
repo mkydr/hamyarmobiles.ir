@@ -1,0 +1,16 @@
+version: '3.9'
+
+services:
+  nginx:
+    image: docker.arvancloud.ir/nginx:latest
+    container_name: nginx_server
+    ports:
+      - "80:80" # Map port 80 on the host to port 80 in the container
+    volumes:
+      - ./website:/usr/share/nginx/html:ro # Mount your website files to Nginx's default HTML directory
+    networks:
+      - webnet
+
+networks:
+  webnet:
+    driver: bridge
