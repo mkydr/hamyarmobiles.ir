@@ -9,7 +9,5 @@ import { renderAdmin } from "@strapi/strapi/admin";
 renderAdmin(document.getElementById("strapi"), {
   plugins: {
     "strapi-cloud": strapiCloud,
-    documentation: documentation,
-    "users-permissions": usersPermissions,
-  },
+     "users-permissions": usersPermissions,},
 });
